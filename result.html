@@ -180,7 +180,7 @@
 <audio id="audio" src="./public/mouse-click-290204.mp3"></audio>
 <audio id="background" src="./public/funny-bgm-240795.mp3"></audio>
 <script>
-    const socket = io("http://game.dostech.vn:3000"); // Kết nối đến server
+    const socket = io("ws://localhost:3000"); // Kết nối đến server
     $(document).on("click", function () {
         var background = document.getElementById("background");
         background.loop = true;
