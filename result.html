@@ -151,7 +151,7 @@
     </div>
 </div>
 <div class="button-container">
-    <button id="submitButton" class="button">Reset</button>
+    <button id="submitButton" onclick="reset()" class="button">Reset</button>
 </div>
 <div class="footer text-center" >
     Giáo viên: Trần Thị Vân Oanh
@@ -223,9 +223,10 @@
         }
     });
 
-    document.getElementById("submitButton").addEventListener("click", function () {
+    function reset() {
         socket.emit("reset", true);
-    });
+        location.reload()
+    }
 </script>
 </body>
 </html>
