@@ -42,6 +42,9 @@
             font-weight: bold;
             transition: background 0.3s;
             border-radius: 12px;
+            position: relative;
+            top: -140px;
+            left: 80%;
         }
 
         .button:hover {
@@ -147,8 +150,9 @@
         <span id="title_2"></span>
     </div>
 </div>
-<button id="reset" class="button">Reset</button>
-
+<div class="button-container">
+    <button id="submitButton" class="button">Reset</button>
+</div>
 <div class="footer text-center" >
     Giáo viên: Trần Thị Vân Oanh
 </div>
@@ -219,7 +223,7 @@
         }
     });
 
-    document.getElementById("reset").addEventListener("click", function () {
+    document.getElementById("submitButton").addEventListener("click", function () {
         socket.emit("reset", true);
     });
 </script>
