@@ -193,6 +193,7 @@
     socket.emit("result", true);
 
     socket.on("result", (data) => {
+        console.log(data);
         $count=0;
 
         $.each(data, function (index, value) {
