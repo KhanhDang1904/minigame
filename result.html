@@ -148,8 +148,7 @@
     </div>
 </div>
 <div class="button-container">
-    <button id="rulesButton" class="button" onclick="thele()">Thể lệ</button>
-    <button id="submitButton" class="button">Nộp</button>
+    <button id="submitButton" class="button">Reset</button>
 </div>
 <div class="footer text-center" >
     Giáo viên: Trần Thị Vân Oanh
@@ -222,17 +221,7 @@
     });
 
     document.getElementById("submitButton").addEventListener("click", function () {
-        var nodes = jm.mind.nodes;
-        var result = [];
-        Object.values(nodes).forEach(node => {
-            if (node.parent && node.parent.id !== "root") {
-                result.push({key: node.parent.id, value: node.id});
-            }
-        });
-        result.sort((a, b) => a.key.localeCompare(b.key));
-
-        $group.result = result;
-        socket.emit("submit", JSON.stringify($group));
+        socket.emit("reset", true);
     });
 </script>
 </body>
