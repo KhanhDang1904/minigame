@@ -86,7 +86,7 @@
 <script src="bootstrap.min.js"></script>
 <script src="socket.io.min.js"></script>
 <script>
-    const socket = io("http://game.dostech.vn:3000"); // Kết nối đến server
+    const socket = io("ws://game.dostech.vn:3000"); // Kết nối đến server
     socket.on("start", (group) => {
         if (group.socket_id===socket.id){
             //Luu session bien group
