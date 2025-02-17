@@ -224,7 +224,8 @@
 
             var jm = new jsMind(options);
             jm.show(value.nodes);
-            jm.zoom(0.7);
+            //set zoom  = 0.7
+            jm.setZoom(0.7);
             $("#title_"+$count).text(value.groupName+" - "+value.point+" điểm");
         });
         console.log($count)
