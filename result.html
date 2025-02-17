@@ -101,9 +101,9 @@
             color: #fff;
             border: 3px solid #8a0000;
         }
-        jmnodes,canvas{
-            zoom: 0.7!important;
-        }
+        /*jmnodes,canvas{*/
+        /*    zoom: 0.7!important;*/
+        /*}*/
         .jsmind-inner.jmnode-overflow-hidden {
             display: flex;
             justify-content: center;
@@ -224,6 +224,7 @@
 
             var jm = new jsMind(options);
             jm.show(value.nodes);
+            jm.zoom(0.7);
             $("#title_"+$count).text(value.groupName+" - "+value.point+" điểm");
         });
         console.log($count)
