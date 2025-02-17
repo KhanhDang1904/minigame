@@ -101,7 +101,9 @@
             color: #fff;
             border: 3px solid #8a0000;
         }
-
+        jmnodes,canvas{
+            zoom: 0.7!important;
+        }
         .jsmind-inner.jmnode-overflow-hidden {
             display: flex;
             justify-content: center;
@@ -204,7 +206,6 @@
 
         $.each(data, function (index, value) {
             $count++;
-            //add zoom in 0.7
             var options = {
                 container: "jsmind_container_"+$count,
                 theme: "primary",
@@ -218,7 +219,6 @@
                     hspace: 65,
                     vspace: 40
                 },
-                 zoom: 0.5
             };
 
 
